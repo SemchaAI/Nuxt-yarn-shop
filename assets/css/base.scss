@@ -1,0 +1,159 @@
+/* color palette */
+:root {
+  --primary: #bb86fc;
+  --primary-focused: #dbb2ff;
+  --primary-variant: #3700b3;
+  --secondary: #03dac5;
+  --tertiary: #ffffff;
+
+  --background: #292929; //idk why in pallette was 121212
+  --background-soft: #3d3d3d;
+
+  --surface: #121212;
+
+  --error: #cf6679;
+  --favorite: #cf6679;
+
+  --on-white-skeleton: #f1f2f3;
+
+  --on-primary: #000000;
+  --on-primary-hight-accent: rgba(0, 0, 0, 1);
+  --on-primary-medium-accent: rgba(0, 0, 0, 0.74);
+  --on-primary-disabled-accent: rgba(0, 0, 0, 0.38);
+
+  --on-secondary: #000000;
+
+  --on-background: #ffffff;
+
+  --on-surface: #ffffff;
+  --on-surface-hight-accent: rgba(255, 255, 255, 0.87);
+  --on-surface-medium-accent: rgba(255, 255, 255, 0.6);
+  --on-surface-disabled-accent: rgba(255, 255, 255, 0.38);
+
+  --btn-outline-border: rgba(255, 255, 255, 0.12);
+
+  --disabled: rgba(255, 255, 255, 0.12);
+
+  --on-error: #000000;
+
+  // SHADOWS
+  --dp-0: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --dp-1: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  --dp-16: 0px 8px 10px 0px rgba(0, 0, 0, 0.2),
+    0px 6px 30px 0px rgba(0, 0, 0, 0.12), 0px 16px 24px 0px rgba(0, 0, 0, 0.14);
+
+  // INDEXES
+  --header: 3;
+  --bannerBtns: 2;
+  /* modal library have 1000 index */
+  --z-error: 1001;
+
+  /* Component Controls: Clear, Open Indicator */
+  --vs-controls-color: var(--primary);
+  --vs-border-color: var(--primary);
+  --vs-dropdown-bg: var(--background);
+  --vs-dropdown-color: var(--primary);
+  --vs-dropdown-option-color: var(--primary);
+  --vs-selected-color: var(--tertiary);
+  --vs-search-input-color: var(--on-surface-disabled-accent);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Bold.eot');
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+    url('/fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Roboto-Bold.woff2') format('woff2'),
+    url('/fonts/Roboto-Bold.woff') format('woff'),
+    url('/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular.eot');
+  src: local('Roboto'), local('Roboto-Regular'),
+    url('/fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Roboto-Regular.woff2') format('woff2'),
+    url('/fonts/Roboto-Regular.woff') format('woff'),
+    url('/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Black.eot');
+  src: local('Roboto Black'), local('Roboto-Black'),
+    url('/fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Roboto-Black.woff2') format('woff2'),
+    url('/fonts/Roboto-Black.woff') format('woff'),
+    url('/fonts/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Medium.eot');
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+    url('/fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Roboto-Medium.woff2') format('woff2'),
+    url('/fonts/Roboto-Medium.woff') format('woff'),
+    url('/fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  min-height: 100dvh;
+  color: var(--primary);
+  background: var(--background);
+  transition: color 0.5s, background-color 0.5s;
+  font-family: Roboto, sans-serif;
+  @include body1Typo;
+  // font-size: 16px;
+  // font-weight: 400;
+  // line-height: 24px;
+  // letter-spacing: 0.5px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+#app {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,80 @@
+@mixin body1Typo() {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+@mixin body2Typo() {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+@mixin btnTypo() {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 1.25px;
+}
+
+@mixin headline1Typo() {
+  font-size: 96px;
+  font-weight: 300;
+  line-height: 112px;
+  letter-spacing: -1.5px;
+}
+@mixin headline2Typo() {
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 72px;
+  letter-spacing: -0.5px;
+}
+@mixin headline3Typo() {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: 0px;
+}
+@mixin headline4Typo() {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0px;
+}
+@mixin headline5Typo() {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+}
+
+// ANIMATIONS
+
+@mixin transition() {
+  transition: all 0.5s ease;
+}
+
+// FLEX CENTERED
+
+@mixin flexCentered() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// COLOR MIXS
+
+@mixin colorMix($color) {
+  background-color: var(--#{$color});
+  color: var(--on-#{$color});
+}
+// text
+
+@mixin smartText($lh) {
+  height: $lh;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
